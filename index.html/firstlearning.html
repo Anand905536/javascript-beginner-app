@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            background-color: black;
+        }
+      .bulb{
+        width:25%;
+        
+      }
+      .maindiv{
+        margin-top: 120px;;
+      
+      }
+      .btn{
+        width:120px;
+        height:40px;
+        background-color: #007500;
+        text-decoration: solid;
+        font-weight: bold;
+        color:white;
+      }
+      .commen{
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+      }
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <img id="bulbchange" class="bulb  commen" src="gglow-On.jpg" alt="Not shown"><br><br>
+        <button class="btn  commen"  id="togglebtn">Turn On</button>
+    </div>
+   <script>
+    let btn=document.getElementById('togglebtn')
+    let bulb=document.getElementById('bulbchange')
+    btn.addEventListener('click',togglebulb)
+    function togglebulb(e){
+      if(btn.textContent.includes('Off')){
+        bulb.src="gglow-On.jpg"
+        btn.textContent="Turn On"
+      }
+      else{
+        bulb.src="pglow-Off.jpg"
+        btn.textContent="Turn Off"
+       
+      } 
+    }
+   </script>
+</body>
+</html>
